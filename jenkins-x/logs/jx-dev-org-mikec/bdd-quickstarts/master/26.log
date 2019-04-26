@@ -1,0 +1,50 @@
+Step: build-step-credential-initializer-cmwtl:
+
+{"level":"warn","ts":1556296671.2203019,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1556296671.221026,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-**-dev-org-mikec-bdd-quickstart-ps8gg:
+
+{"level":"warn","ts":1556296672.0419552,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1556296672.3690271,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/**-dev-org-mikec/bdd-quickstarts\" @ \"master\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-04-26T16:37:54Z" level=info msg="got "
+time="2019-04-26T16:37:54Z" level=warning msg="no SHAs to merge, falling back to initial cloned commit"
+Step: build-step-runci:
+
++ export GH_USERNAME=**********************
++ GH_USERNAME=**********************
++ export GH_OWNER=**-dev-org-mikec
++ GH_OWNER=**-dev-org-mikec
+++ ** step credential -s **********************
+error: failed to find Secret ********************** in namespace **: secrets "**********************" not found
++ export GH_CREDS_PSW=
++ GH_CREDS_PSW=
+++ ** step credential -s test-jenkins-user
+error: failed to find Secret test-jenkins-user in namespace **: secrets "test-jenkins-user" not found
++ export JENKINS_CREDS_PSW=
++ JENKINS_CREDS_PSW=
+++ ** step credential -k bdd-credentials.json -s bdd-secret -f sa.json
+error: failed to find Secret bdd-secret in namespace **: secrets "bdd-secret" not found
++ export GKE_SA=
++ GKE_SA=
++ export BUILD_NUMBER=26
++ BUILD_NUMBER=26
++ JX_HOME=/tmp/**home
++ KUBECONFIG=/tmp/**home/config
++ mkdir -p /tmp/**home
++ ** --version
+2.0.12
++ ** step git credentials
+{"level":"info","msg":"Generated Git credentials file /builder/home/git/credentials\n","time":"2019-04-26T16:37:55Z"}
++ gcloud auth activate-service-account --key-file
+ERROR: (gcloud.auth.activate-service-account) argument --key-file: expected one argument
+Usage: gcloud auth activate-service-account [ACCOUNT] --key-file=KEY_FILE [optional flags]
+  optional flags may be  --help | --********-file | --prompt-for-********
+
+For detailed information on this command and its flags, run:
+  gcloud auth activate-service-account --help
+{"component":"entrypoint","error":"wrapped process failed: exit status 2","level":"error","msg":"Error executing test process","time":"2019-04-26T16:37:56Z"}
