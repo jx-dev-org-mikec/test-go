@@ -1,0 +1,51 @@
+Step: build-step-credential-initializer-57n2r:
+
+{"level":"warn","ts":1556310453.9089851,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1556310453.9096637,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-**-dev-org-mikec-bdd-quickstart-jmdnl:
+
+{"level":"warn","ts":1556310454.528455,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1556310454.7275677,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/**-dev-org-mikec/bdd-quickstarts\" @ \"master\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-04-26T20:27:36Z" level=info msg="got "
+time="2019-04-26T20:27:36Z" level=warning msg="no SHAs to merge, falling back to initial cloned commit"
+Step: build-step-runci:
+
++ export GH_USERNAME=**********************
++ GH_USERNAME=**********************
++ export GH_OWNER=**-dev-org-mikec
++ GH_OWNER=**-dev-org-mikec
+++ ** step credential -s **********************
+error: failed to find Secret ********************** in namespace **: secrets "**********************" not found
++ export GH_CREDS_PSW=
++ GH_CREDS_PSW=
++ export BUILD_NUMBER=35
++ BUILD_NUMBER=35
++ JX_HOME=/tmp/**home
++ KUBECONFIG=/tmp/**home/config
++ mkdir -p /tmp/**home
++ ** --version
+2.0.12
++ ** step git credentials
+{"level":"info","msg":"Generated Git credentials file /builder/home/git/credentials\n","time":"2019-04-26T20:27:37Z"}
++ git config --global --add user.name JenkinsXBot
++ git config --global --add user.email jenkins-x@googlegroups.com
++ echo 'running the BDD tests with JX_HOME = /tmp/**home'
+running the BDD tests with JX_HOME = /tmp/**home
++ echo 'lets copy over the local jenkins-x-versions repo for now'
+lets copy over the local jenkins-x-versions repo for now
++ mkdir -p /builder/home/.**
++ pushd /builder/home/.**
+~/.** /workspace/source
++ git clone https://github.com/jenkins-x/jenkins-x-versions.git
+Cloning into 'jenkins-x-versions'...
++ popd
+/workspace/source
++ cp -r charts Dockerfile jenkins-x-prow.yml.safe jenkins-x-tekton.yml.safe jenkins-x.yml jenkins-x.yml.safe ** OWNERS OWNERS_ALIASES README.md skaffold.yaml watch.sh /builder/home/.**/jenkins-x-versions
++ ** step bdd --dir . --config **/bdd/staticjenkins.yaml --gopath /tmp --git-provider=github --git-username ********************** --git-owner **-dev-org-mikec --git-api-token --default-*****-******** --no-delete-app --no-delete-repo --tests install --tests test-create-spring
+error: failed to load file **/bdd/staticjenkins.yaml: open **/bdd/staticjenkins.yaml: no such file or directory
+{"component":"entrypoint","error":"wrapped process failed: exit status 1","level":"error","msg":"Error executing test process","time":"2019-04-26T20:27:38Z"}
