@@ -1,0 +1,19 @@
+Step: build-step-credential-initializer-gcrjd:
+
+{"level":"warn","ts":1556294720.4628465,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1556294720.46341,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-**-dev-org-mikec-bdd-quickstart-w9b55:
+
+{"level":"warn","ts":1556294721.984849,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1556294722.183706,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/**-dev-org-mikec/bdd-quickstarts\" @ \"master\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-04-26T16:05:24Z" level=info msg="got "
+time="2019-04-26T16:05:24Z" level=warning msg="no SHAs to merge, falling back to initial cloned commit"
+Step: build-step-runci:
+
+/bin/sh: **/scripts/ci.sh: No such file or directory
+{"component":"entrypoint","error":"wrapped process failed: exit status 127","level":"error","msg":"Error executing test process","time":"2019-04-26T16:05:25Z"}
